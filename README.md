@@ -1,5 +1,3 @@
-#Overall Report
-
 The objective of this assessment was to evaluate the security posture of the target web application.  
 I performed initial information gathering (DNS lookup, server details) followed by web vulnerability scanning to check open ports, HTTP headers, methods, technologies used, and SSL/TLS configuration.  
 
