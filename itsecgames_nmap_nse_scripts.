@@ -1,0 +1,70 @@
+Nmap 7.95 scan initiated Fri Sep 19 02:39:26 2025 as: /usr/lib/nmap/nmap --privileged -p 80,443 --script http-headers,http-methods -oN nmap_scan 31.3.96.40
+Nmap scan report for web.mmebvba.com (31.3.96.40)
+Host is up (0.025s latency).
+
+PORT    STATE    SERVICE
+80/tcp  open     http
+http-methods:
+Supported Methods: GET HEAD POST OPTIONS
+http-headers:
+Date: Fri, 19 Sep 2025 06:39:30 GMT
+Server: Apache
+Location: https://www.mmebvba.com
+Content-Length: 231
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+(Request type: GET)
+443/tcp filtered https
+
+# Nmap done at Fri Sep 19 02:39:31 2025 -- 1 IP address (1 host up) scanned in 4.72 seconds
+
+Nmap Script Engines Scan Report
+Target Information
+IP Address: 31.3.96.40
+Domain: web.mnebvba.com / www.itscgames.com
+Scan Date: September 19, 2025
+
+##Scan Results Summary
+
+#Critical Findings:
+OpenSSH 6.7p1 with multiple high-severity vulnerabilities
+10+ exploitable vulnerabilities detected on SSH service
+Expired SSL certificate (2015-2016)
+
+#Services Exposed
+Port 22: OpenSSH 6.7p1 (Multiple critical vulnerabilities)
+Port 80: HTTP → Redirects to HTTPS
+Port 443: HTTPS (SSL/TLS with expired certificate)
+
+#Detailed Findings:
+SSH Service (Port 22) - CRITICAL
+Version: OpenSSH 6.7p1
+Status: Multiple exploitable vulnerabilities
+
+#Top Vulnerabilities:
+1.CVE-2023-16800 (Score: 9.8/10) - Critical
+2.CVE-2016-19808 (Score: 9.8/10) - Critical
+3.CVE-2015-5600 (Score: 8.1/10) - High
+7+ additional exploits with public PoCs
+
+#Web Services:
+Port 80: HTTP → Redirects to HTTPS
+Server: Apache
+Methods: GET, HEAD, POST, OPTIONS
+Port 443: HTTPS
+SSL Certificate: EXPIRED (2015-2016)
+Common Name: web.mnebvba.com
+Key: RSA 2048-bit (SHA256)
+
+#Immediate Actions Required:
+1.Patch SSH Immediately
+2.Upgrade OpenSSH to latest version
+3.Consider restricting SSH access
+4.Replace SSL Certificate: 
+5.Obtain valid SSL certificate
+6.Harden Web Server
+7.Review Apache configuration
+8.Implement security headers
+
+
+
