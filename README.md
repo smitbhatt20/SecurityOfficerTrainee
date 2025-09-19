@@ -38,10 +38,12 @@ Tools Used:
 4.SSLScan
 
 5.WhatWeb
+
 6.OWASP Zap
 
 
 Outcome:
+
 1.Identification of outdated software, CVEs, misconfigurations, and SSL/TLS weaknesses
 
 2.Prioritized vulnerability list with mitigation recommendations
