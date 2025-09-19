@@ -1,51 +1,11 @@
-Detailed Description:
+#Overall Report
 
-This repository contains a structured vulnerability assessment conducted as part of the Security Officer Trainee assignment. The assessment focuses on evaluating the security posture of www.itsecgames.com through multiple stages:
+The objective of this assessment was to evaluate the security posture of the target web application.  
+I performed initial information gathering (DNS lookup, server details) followed by web vulnerability scanning to check open ports, HTTP headers, methods, technologies used, and SSL/TLS configuration.  
 
-a.Information Gathering: DNS resolution, server IP identification, and metadata collection.
+Findings show that the server is running Apache with HTTP enabled and redirecting to HTTPS.  
+Headers and scans revealed details about technologies in use, possible misconfigurations, and areas where security hardening may be needed.  
+Automated scanners were used to check for outdated components, common vulnerabilities, and exposed information.  
 
-b.Port & Service Scanning: Identification of open ports, running services, and version detection using Nmap.
+The purpose of this exercise was to demonstrate a systematic approach to identifying risks and presenting clear evidence of potential weaknesses that attackers could exploit, along with the importance of mitigation through patching, secure configuration, and reducing information exposure.
 
-c.Web Application Security Analysis: Detection of web vulnerabilities, misconfigurations, and missing security headers using Nikto and cURL.
-
-d.SSL/TLS Assessment: Evaluation of certificate health, protocol support, and cipher strength using SSLScan.
-
-e.Technology & Version Enumeration: Identification of CMS, frameworks, and software versions with WhatWeb to cross-check for known CVEs.
-
-f.Evidence & Screenshots: Screenshots and tool outputs documenting findings.
-
-g.Prioritized Findings & Recommendations: Vulnerabilities ranked by risk level with actionable mitigation steps.
-
-Repository Contents:
-
-/scans      -> Tool outputs (Nmap, Nikto, SSLScan, WhatWeb)
-/screenshots -> Screenshots of web application, banners, headers, and tools
-/report     -> Markdown vulnerability report summarizing findings and recommendations
-metadata.txt -> Pre-scan information (target, IP, DNS)
-
-
-Objective:
-To demonstrate a hands-on approach to vulnerability assessment, providing a structured report suitable for management review and actionable remediation.
-
-Tools Used:
-
-1.nslookup
-
-2.Nmap
-
-3.Nikto
-
-4.SSLScan
-
-5.WhatWeb
-
-6.OWASP Zap
-
-
-Outcome:
-
-1.Identification of outdated software, CVEs, misconfigurations, and SSL/TLS weaknesses
-
-2.Prioritized vulnerability list with mitigation recommendations
-
-3.Professional report ready for submission and GitHub portfolio
