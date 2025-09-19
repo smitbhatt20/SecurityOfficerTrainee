@@ -1,0 +1,20 @@
+#WhatWeb Scan Report
+
+#Target
+URL: http://www.itscgames.com
+IP: 31.3.96.40
+Location: Netherlands (NL)
+
+#Results
+Status: 200 OK
+Server: Apache
+HTML: HTML5
+Title: WWDP
+Scripts: JavaScript detected
+Note: Identified as "a buggy web application"
+
+#Summary:Basic web technology scan completed. Application appears to be a custom "WWDP" project built with HTML5 and JavaScript, running on Apache. The scanner flagged it as potentially problematic ("buggy web application").
+
+*Scan date: 2025-09-19*
+Tool: WhatWeb
+
