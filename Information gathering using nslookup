@@ -1,0 +1,13 @@
+## Information Gathering: DNS Lookup
+
+Objective: Identify the domain's IP address and DNS server information.
+
+Tool Used: nslookup (Linux command-line tool)
+
+Findings:
+- Target Domain: www.itsecgames.com
+- Authoritative DNS Server: 31.3.96.40
+- Local DNS Resolver: 192.168.44.2
+- Target IP Address: 31.3.96.40
+
+Explanation: The nslookup command was used to gather DNS information of the target domain. This helps in identifying the authoritative server, resolving IP addresses, and is the first step in information gathering before performing network or vulnerability scans.
