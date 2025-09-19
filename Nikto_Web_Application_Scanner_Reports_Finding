@@ -1,0 +1,46 @@
+A security assessment was performed on itsegames.com using Nikto web scanner to identify potential vulnerabilities and security misconfigurations.
+
+##Nikto Web Scan:-
+Target: www.itsecgames.com  
+Tool: Nikto  
+Command: nikto -h http://www.itsecgames.com -output scans/nikto_scan.txt  
+
+
+1. Scan Target:-
+URL: http://itsegames.com
+IP Address: 31.3.96.40
+Port: 80
+Web Server: Apache
+
+2. Scan Details:-
+Tool: Nikto v2.5.0
+Scan Timestamp: September 19, 2025, 02:15 AM (AMT-4)
+
+3. Findings Summary:
+
+Security Issues Found:-
+a.Medium Severity: Missing security headers across entire site
+b.Low Severity: Information disclosure through server headers
+c.Informational: Technology disclosure (Drupal CMS detected)
+d.Standard HTTP methods allowed (GET, HEAD, POST, OPTIONS)
+
+4.Detailed Findings:-
+#Security Headers Missing
+Location: All pages
+Issue: Missing important security headers
+X-Frame-Options header not present (clickjacking protection)
+X-Content-Type-Options header not set (MIME sniffing protection)
+
+#Information Disclosure
+Location: Server headers
+Issue: ETag header exposes server information
+Recommendation: Configure Apache to remove inode information from ETags
+
+#Technology Disclosure
+Location: /31.3.96.40.tar
+Issue: Drupal CMS identified through headers
+Risk: Low - reveals technology stack but doesn't directly enable attacks
+
+#HTTP Methods
+Finding: Allowed methods: GET, HEAD, POST, OPTIONS
+Status: Normal for web servers
